@@ -1,0 +1,19 @@
+<h1>home</h1>
+
+{% comment %} <pre>{{projects}}</pre> {% endcomment %}
+
+{% for project in projects %}
+
+<h2> {{project.titulo}}</h2>
+<p>{{project.descripcion}}</p>
+
+<img src = '{{project.imagen.url}}' alt = '{{project.titulo}}'>
+
+{% if project.url  %}
+
+<a href = '{{project.url}}'>{{project.url}}</a>
+
+{% endif %}
+
+{% endfor %}
+

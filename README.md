@@ -57,3 +57,42 @@ Editar la inforamcion que se va a mostrar en base de datos
     -> http://localhost:8000/
 
 # ----------- FIN DE PARTE 1  INTRODUCCION ----------------- 
+
+# ----------- PARTE 2  ADMIN : VISTAS  ----------------- 
+
+
+1. Configurar admin 
+    Creamos un usuario con 
+    ==>  python manage.py createsuperuser
+    - Nombre : ela
+    - Password : 123456789
+
+    admin.py --> 
+    desde alli podemos confugurar nuestro panel admin
+
+
+    Al añadir las imagenes en el proyecto por admin se crea una carpeta automatica  con el nombre de : Imagenes
+
+2. Configurar la seccion para poner las fotos en settings.py
+
+    MEDIA_ROOT = BASE_DIR / "media" ->[Para new la carpeta {MEDIA}]
+
+3. Crear vistas .html para el Front End
+
+    Debemos crear primero la carpeta TEMPLATE dentro 
+    Dentro de la carpeta template crear los archivos index.html
+
+    Las vistas se configuran desde el el archivo de views.py de dentro de la App que se quiere cambiar en este caso Portfolio
+    Creamos una funcion dentro para hacer el render.
+
+    Luego ponemos la nueva ruta en  urls.py de la carpeta principal.
+
+4. Hacer que se muestre de los proyecto creados 
+    -> Hacer traer en la pantalla la informacion de los proyectos que tenemos en la base de datos 
+
+    ->tenemos que hacer una consulta a la base de datos
+    Primero tramaemos el modelo de datos a al archivo views.py de la carpeta portafolio
+
+
+
+

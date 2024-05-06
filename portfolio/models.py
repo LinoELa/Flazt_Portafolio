@@ -15,6 +15,7 @@ from django.db.models.fields.files import ImageField
 class Proyect (models.Model):
     titulo = CharField(max_length=100)
     descripcion = CharField(max_length=250)
-    imagen = ImageField(upload_to='portfolio/images/')
+    #Luego crea una carpeta con { upload_to='portfolio/images/' }
+    imagen = ImageField(upload_to='portfolio/images/') 
     #tengo que poner el model al principio y si quiero el los de arriab tambien
     url= models.URLField(blank=True) 
