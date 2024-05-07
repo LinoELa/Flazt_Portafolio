@@ -146,6 +146,7 @@ Editar la inforamcion que se va a mostrar en base de datos
         ==> http://127.0.0.1:8000/blog/3
         ==> http://127.0.0.1:8000/blog/4
         ==> ...
+5. Configuar para poner ir al blog que estamso viendo, es como poner unlink abajo
 
 
 
