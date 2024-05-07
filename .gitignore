@@ -1,0 +1,8 @@
+# Para que ignore estos archivos 
+
+media 
+
+# Todo lo que este dentro de una carpea y que tenga __pycache__
+**__pycache__**
+
+venv

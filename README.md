@@ -214,3 +214,24 @@ Primero entender el concepto de LAYOUT
 Ahora vamos a estilizar la seccion 1 
 
 Es los ultimos 20 minutos donde estiliza la pagina
+
+
+
+# ----------- PARTE 5 : FINAL ----------------- 
+
+VAMOS A PREPARAR EL PROYECTO PARA EL DESPLIQUE Y DECIR CUALES ARCCHIVOS SON MAS IMPORTANTE
+
+1. Con PIP para generar las dependencias relacionados a este proyecto : Que lo guarde en requierements
+    ==> pip freeze > requirements.txt
+
+2. Crear GITIGNORE para que ignore los archivos que no son necesarios 
+    Dentro le ponemos las carpetas y archivos que tiene que ignorar 
+
+
+
+
+
+
+
+
+# --------------------- FIN ----------------- 
