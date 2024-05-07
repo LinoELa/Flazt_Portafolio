@@ -3,6 +3,10 @@
 
 {% block content  %}
 
+{% comment %} Cargamos la carpeta static para descargar documentos {% endcomment %}
+{% load static %}
+<img src = '{% static "../static/porfolio/foto_perfil.png" %}' alt=''>
+
 <h1>home</h1>
 
 {% comment %} <pre>{{projects}}</pre> {% endcomment %}

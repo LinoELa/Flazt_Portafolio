@@ -1,17 +1,33 @@
+
+{% comment %} Importamos primero la etiqueta (carpeta) STATIC  {% endcomment %}
+
+{% load static %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% comment %} Bootstrap {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    {% comment %} vinculamos el archivo estatico {% endcomment %}
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+
     <title>Portafolio</title>
 </head>
 <body>
     {% comment %} Es el layou o diseno princpal  {% endcomment %}
 
-    <h1>Navbar</h1>
+    {% include "partials/navbar.html" %}
 
-    {% block content %} 
-    {% endblock  %}
+    <div class="container p-4">
+        {% block content %} 
+        {% endblock  %}
+    </div>
+
     
 </body>
 </html>

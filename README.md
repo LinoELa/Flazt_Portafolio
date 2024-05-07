@@ -166,3 +166,46 @@ Primero entender el concepto de LAYOUT
     ==> {% block content  %}
     ==> {% endblock  %}
 
+
+# ----------- PARTE 4 B BOOTSTRAP  ----------------- 
+
+1. Empezamos vinculando Bootstrap y pegando el link en layout.html
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+------------------------ Navbar ----------------------------
+
+2. Dentro de la carpeta Template, creamos una carpeta llamada partials y eentro le ponemos un archivo que se llamara navbar.html
+
+    A. se puede crear asi :
+        ==> partials/navbar.html
+
+
+2. Ponemos el navbar de bootstrap que esta en Components
+
+3. Editamos el navbar de bootstrap como queremos que se quede 
+
+    A. Entre las cosas que configuramos son los links del navbar 
+
+     ==> <a class="navbar-brand fw-bold fst-italic" href="/">RR</a>
+
+     ==>   <a class="nav-link" href="{% url 'blog:post' %}">Blog</a>
+
+4. Encuento a descargar quiero que descarge algo
+    A. Configuro y estiliso el boton de descargar
+    B. Creo una nueva carpeta llamado STATIC : pero es publico
+    C. Dentro de la carpeta crear un un archivo el quesea ej: main.css
+    D. Luego cargarlo en la pagina que se quiere llamar
+
+            ==> {% load static %}
+
+            Podemos asta ver el codigo del archivo 
+            ==> http://127.0.0.1:8000/static/main.css
+
+    E. Dentro de la carpeta static se puede crear otra carpeta (EJ: PORTAFOLIO) donde se le va meter los docomentos (Imagenes, Pdf, Excel , Csv... )
+
+    F. Luego en el boton que se quiere que se descarge se puede pone el link de  la parte mas importante es ' {% static "porfolio/cvPython.pdf"%}' 
+        ==> <a class="btn btn-primary btn-sm" href="{% static "porfolio/cvPython.pdf"%}" target='_blank' >Descargar CV</a>
+        
+------------------------ Seccion 1  ----------------------------
+
