@@ -149,8 +149,20 @@ Editar la inforamcion que se va a mostrar en base de datos
 5. Configuar para poner ir al blog que estamso viendo, es como poner unlink abajo
 
 
+# ----------- PARTE 4 HTML : Layout : Estructura  ----------------- 
+
+Primero entender el concepto de LAYOUT
+
+1. Creamos un un archivo layout.hmtl
+    Que sera como el archivo padre del diseno donde todos van a heredar
+    ==>{% block content %} 
+    ==>{% endblock  %}
 
 
 
+2. Luego lo pasamos dentro de los demas archivos.html para que lo puedan heredar 
+    ==>{% extends "layout.html" %}
 
+    ==> {% block content  %}
+    ==> {% endblock  %}
 

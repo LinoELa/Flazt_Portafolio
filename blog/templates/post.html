@@ -1,3 +1,6 @@
+{% extends "layout.html" %}
+
+{% block content %}
 <h1> Post </h1>
 
 {% comment %} <pre>{{posts}} </pre> {% endcomment %}
@@ -19,7 +22,9 @@
 
 {% comment %} #para navegar a una de la publiaciones  {% endcomment %}
 <a href = '{% url 'blog:post_detail' post.id %}'> {{post.titulo}} <a>
-
-
-
-{% endfor %}
+    
+    
+    
+    {% endfor %}
+    
+{% endblock content %}
