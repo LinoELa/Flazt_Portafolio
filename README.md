@@ -1,6 +1,8 @@
 # Flazt_Portafolio
 
 ---- Commit cada 15 - 20 minutos del video ---- 
+Video Original : 
+https://youtu.be/zBjMF6je24U
 
 # -------------  Introduccion ----------------
 
@@ -209,3 +211,6 @@ Primero entender el concepto de LAYOUT
         
 ------------------------ Seccion 1  ----------------------------
 
+Ahora vamos a estilizar la seccion 1 
+
+Es los ultimos 20 minutos donde estiliza la pagina

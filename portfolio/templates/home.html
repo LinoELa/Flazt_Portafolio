@@ -1,29 +1,67 @@
-
 {% extends "layout.html" %}
 
 {% block content  %}
 
 {% comment %} Cargamos la carpeta static para descargar documentos {% endcomment %}
 {% load static %}
-<img src = '{% static "../static/porfolio/foto_perfil.png" %}' alt=''>
 
-<h1>home</h1>
+<header class="row bg-black">
 
-{% comment %} <pre>{{projects}}</pre> {% endcomment %}
+    <div class="col-md-4 my-auto">
+        <img src='{% static "porfolio/foto_perfil.png" %}' alt="">
+    </div>
 
-{% for project in projects %}
+    <div class="col-md-8 my-auto">
+        <h1>I am <strong>Ela Lino</strong></h1>
 
-<h2> {{project.titulo}}</h2>
-<p>{{project.descripcion}}</p>
+        <h3>I am a Python FullStack Developer</h3>
 
-<img src = '{{project.imagen.url}}' alt = '{{project.titulo}}'>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat recusandae nihil perspiciatis dolorum
+            possimus et dolore est eligendi illo sunt ipsum fugit ea beatae, fugiat nobis ut, sint architecto
+            dignissimos ex excepturi ipsa numquam maiores nostrum! Adipisci quibusdam, sunt sapiente iure magni ratione
+            temporibus? Dolores officiis rerum facilis incidunt quod sint eum reprehenderit vero, quos, porro eos
+            repudiandae quam nulla sed quas! Aperiam nihil sed molestiae assumenda sit illo aut. Asperiores repellat
+            laudantium ea nobis eius beatae, maiores eligendi commodi, vero eaque repudiandae vitae mollitia. Facilis
+            sint rem expedita itaque explicabo nostrum saepe, dolorem sunt, veniam ab similique nisi nulla.
+        </p>
 
-{% if project.url  %}
+        <a class="btn btn-primary btn-lg rounded-0 my-3" href="{% static 'porfolio/cvPython.pdf' %}"
+            target="_blank">Download CV</a>
 
-<a href = '{{project.url}}'>{{project.url}}</a>
 
-{% endif %}
+    </div>
+</header>
 
-{% endfor %}
+{% comment %}
+<pre>{{projects}}</pre> {% endcomment %}
 
+<div class='row my-4 text-center'>
+
+    <h3>My project</h3>
+
+    {% for project in projects %}
+
+    <div class="col-md-4 p-4">
+
+        <div class="card bg-black card-project">
+            
+            <div class='card-body'>
+
+                <img src='{{project.imagen.url}}' alt='{{project.titulo}}' class='card-img-top'>
+
+                <h2> {{project.titulo}}</h2>
+                <p>{{project.descripcion}}</p>
+                
+
+                {% if project.url  %}
+
+                <a href='{{project.url}}' class='btn btn-light' target='_blank'>{{project.url}}</a>
+
+                {% endif %}
+
+            </div>
+        </div>
+    </div> 
+    {% endfor %}
+</div>
 {% endblock  %}

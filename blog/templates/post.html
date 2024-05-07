@@ -4,30 +4,42 @@
 
 
 
-<h1> Post </h1>
+<h1 clase='fs-2' > Post </h1>
 
 {% comment %} <pre>{{posts}} </pre> {% endcomment %}
 
 {% comment %} Desde la clase de models.py  {% endcomment %}
 {% for post in posts %}
 
-<h2> {{post.titulo}}  </h2>
-{% comment %} Fecha formateada {% endcomment %}
-<h3> {{post.date | date:'M d Y' | upper}}  </h3>
+<div class='p-3'>
 
-{% comment %} decir que solo me muestre 100 caracteres : truncatechars:100 {% endcomment %}
-{% comment %} decir que intreprete el html que he puesto en la descripcion : stringtags  {% endcomment %}
-<p>  {{post.descipcion | striptags | truncatechars:100}} </p>
-{% comment %} descipcion {% endcomment %}
+    <div class="card card-body bg-black">
 
-<img src = '{{post.imagen.url}}' alt = '{{post.titulo}}'>
+        <div class="row">
 
+            <div class="col-3">
+                <img class='img-fluid' src = '{{post.imagen.url}}' alt = '{{post.titulo}}'/>
+            </div>
 
-{% comment %} #para navegar a una de la publiaciones  {% endcomment %}
-<a href = '{% url 'blog:post_detail' post.id %}'> {{post.titulo}} <a>
+            <div class="col-9">
+
+                <h2> {{post.titulo}}  </h2>
+                {% comment %} descipcion {% endcomment %}
+                {% comment %} decir que solo me muestre 100 caracteres : truncatechars:100 {% endcomment %}
+                {% comment %} decir que intreprete el html que he puesto en la descripcion : stringtags  {% endcomment %}
+                <p>  {{post.descipcion | striptags | truncatechars:100}} </p>
+                {% comment %} Fecha formateada {% endcomment %}
+                <h3> {{post.date | date:'M d Y' | upper}}</h3>
+                {% comment %} #para navegar a una de la publiaciones  {% endcomment %}
+                
+            </div>
+            
+        </div>
+        <a class='btn btn-primary' href = '{% url 'blog:post_detail' post.id %}'> {{post.titulo}} <a>
+        
+    </div>
     
+</div>
+
     
-    
-    {% endfor %}
-    
-{% endblock content %}
+{% endfor %}{% endblock content %}

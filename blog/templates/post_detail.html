@@ -2,20 +2,26 @@
 
 {% block content %}
 
+<div class="text-center">
 
-<h1>post detail CON el date </h1>
-{% comment %} Para probar si funciona  {% endcomment %}
-
-
-
-<h2> {{post.titulo}}  </h2>
-
-<h3> {{post.date}}  </h3>
+    {% comment %} <!-- <h1>post detail CON el date </h1> --> {% endcomment %}
+    {% comment %} Para probar si funciona {% endcomment %}
 
 
-<p>  {{post.descipcion | safe}} </p>
+
+    <h2> {{post.titulo}} </h2>
+
+    <h3 class='my-2 h5 text-muted'> {{post.date|date:'F jS Y'}} </h3>
+
+    <img class='img-fluid' src='{{post.imagen.url}}' alt='{{post.titulo}}'>
+
+    <div class='my-4'>
+        <p> {{post.descipcion | safe}} </p>
+
+    </div>
 
 
-<img src = '{{post.imagen.url}}' alt = '{{post.titulo}}'>
+
+</div>
 
 {% endblock  %}
