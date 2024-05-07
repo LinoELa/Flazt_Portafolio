@@ -96,3 +96,60 @@ Editar la inforamcion que se va a mostrar en base de datos
 
 
 
+# ----------- PARTE 3  VISTAS :   ----------------- 
+
+1. Crear un archivo urls.py para cada app para dividir las urls dependendiendo de la app
+    -->  De hecho primero creamos una urls.py en la App de blog
+    Hacemos casi lo mismo pero dirigido a blog 
+    a. usamos el post.html para crear la visualizaion en pantalla
+    b. Usamos views de blog para la vita 
+    c. Usamos urls.py dee blog para configurar el blog 
+    d. usamos urls.py de djangoPortafolio para poder unirlo con urls.py de blog importando Include  y usandolo.
+
+2. Creamos el modelo de datos en blog en models.py del blog
+
+    A. luego en la administracion del admin creamos el registro para la publicacion
+
+    B. Registar el nuevo modelo en admin.py de blog
+
+    C. Luego tenemos que hacer la migracion para que la base de datos lo reconozca 
+        A: Hacer un migracion con 
+            ==> python manage.py makemigrations
+
+        B: Ejecutar la migracion : Para crear las tablas 
+            ==> python manage.py migrate
+
+    D. Ir al panel de admistracion y anadir informacion en el post en este caso de blog para probar si todo esta bien y si se ve la imagen.
+
+    E. si "D" esta bien pues hacer una consulta 
+
+3. Hacer una consulta  en el views.py de blog para ver si todo esta  bien 
+    A. Configurando la VARIABLE donde de guarfa la informacion y el OBJETO
+
+    B. Para ver si ha estado bien pues en el archivo post.html meterle la Informacion de la base de datos haber si lo muestra
+    <h1> Post </h1>
+
+        {% comment %} <pre>{{posts}} </pre> {% endcomment %}
+        
+        {% for post in posts %}
+
+        <h2> {{post.titulo}}  </h2>
+        <h3> {{post.date}}  </h3>
+        <p>  {{post.descipcion}} </p>
+        <img src = '{{post.imagen.url}}' alt = '{{post.titulo}}'>
+
+        {% endfor %}
+4. Como hacer que cada blog tenga una url dinamica en plan
+    A. http://127.0.0.1:8000/blog/ el el principal de blog
+        ==> http://127.0.0.1:8000/blog/1
+        ==> http://127.0.0.1:8000/blog/2
+        ==> http://127.0.0.1:8000/blog/3
+        ==> http://127.0.0.1:8000/blog/4
+        ==> ...
+
+
+
+
+
+
+

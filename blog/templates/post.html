@@ -1,0 +1,17 @@
+<h1> Post </h1>
+
+{% comment %} <pre>{{posts}} </pre> {% endcomment %}
+
+{% comment %} Desde la clase de models.py  {% endcomment %}
+{% for post in posts %}
+
+<h2> {{post.titulo}}  </h2>
+{% comment %} <h3> {{post.date}}  </h3> {% endcomment %}
+<p>  {{post.descipcion}} </p>
+{% comment %} descipcion {% endcomment %}
+
+<img src = '{{post.imagen.url}}' alt = '{{post.titulo}}'>
+
+
+
+{% endfor %}

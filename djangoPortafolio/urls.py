@@ -16,6 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+#importar include para que pueda leer las carpetas y decidir que sera importado
+from django.urls import include
+
 
 # Para las imagenes 
 from django.conf.urls.static import static
@@ -24,9 +27,14 @@ from django.conf import settings
 # Para las vistas 
 from portfolio import views
 
+#traer info de post 
+from blog import urls
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path('', views.home, name='home')
+    path('', views.home, name='home'),
+    #al visitar la pagina blog que traiga lo que hay alli 
+    path('blog/', include('blog.urls'))
 
     
 ]
