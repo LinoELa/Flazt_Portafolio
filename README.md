@@ -6,12 +6,14 @@ https://youtu.be/zBjMF6je24U
 
 # -------------  Introduccion ----------------
 
-1. Crear entorno de trabajo 
+0. Crear entorno virtual con (en mi caso ANACONDA) :
+       ==> conda create -n (nombre) python=(version que tengo)
+2. Crear entorno de trabajo 
 
-2. Elegir el interprete de python en VSCode
+3. Elegir el interprete de python en VSCode
     -> Video en Flazt
 
-3.  A. Instalar Django con 
+4.  A. Instalar Django con 
         ==> Pip install django
 
     B. Instalamos Pillow
@@ -20,11 +22,11 @@ https://youtu.be/zBjMF6je24U
 
     D. Crear y conectar Github con VSCode
 
-4. Comenzar un proyecto con
+5. Comenzar un proyecto con
     ==> django-admin startproject django-portafolio . 
             {------- el punto es para que no cree mas carpetas ------- }
 
-5. En caso de poner error de emigraciones () hacer
+6. En caso de poner error de emigraciones () hacer
     ==> python manage.py migrate
 
 ## Crear Apps del proyecto
